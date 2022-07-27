@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="./styles/styles.css">
+  <title>Index</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav class="menu">
+      <ul>
+        <li>
+          <a href="../fase3/index.html">Inicio</a>
+        </li>
+        <li>
+          Temas
+          <div class="menu-submenu">
+            <ul>
+              <li><a href="../fase3/topic-first.html">Flex Box</a></li>
+              <li><a href="../fase3/topic-second.html">Listas</a></li>
+              <li><a href="../fase3/topic-third.html">Enlaces</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          Recursos Multimedios
+          <div class="menu-submenu">
+            <ul>
+              <li><a href="../fase3/resources-first.html">Flex Box</a></li>
+              <li><a href="../fase3/resources-second.html">Listas & Enlaces</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          Aprendizaje
+          <div class="menu-submenu">
+            <ul>
+              <li><a href="../fase3/learning-first.html">Aprendizaje 1</a></li>
+              <li><a href="../fase3/learning-second.html">Aprendizaje 2</a></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="../fase3/author.html">Autor</a>
+      </li>
+      </ul>
+    </nav>
+    <article class="main">
+      <h2>Flex Box</h2>
+       <p>
+        Una de las tareas principales de CSS es incorporar todos los elementos de un sitio web en un diseño. El texto, las imágenes y los botones se pueden organizar de forma ordenada. Los diseñadores pueden especificar, hasta cada píxel, dónde debe aparecer cada elemento en la pantalla. Sin embargo, esto solo funciona correctamente si se conocen el tamaño de la pantalla y la relación de aspecto. La tecnología móvil presenta un desafío aquí porque los tamaños de pantalla y las relaciones de aspecto varían según el teléfono inteligente o la tableta. CSS es demasiado rígido para lograr un resultado convincente.
+       </p>
+
+       <p>El diseño se ajusta de forma flexible y dinámica a la pantalla en uso. El espacio se llena o los elementos se juntan para que cada elemento de la página web permanezca a la vista. Para que esto funcione sin que se interrumpa el diseño deseado, Flexbox utiliza dos ejes. El eje principal normalmente corre horizontalmente; el eje transversal corre verticalmente. Usando estos ejes, los elementos se pueden ordenar dentro de la caja. De esta manera, los elementos se pueden distribuir en relación unos con otros. CSS Flexbox también se asegura de que el espacio que rodea a estos elementos se llene de manera sensata.</p>
+
+       <h4>Ejemplo 1:</h4>
+       <pre>
+        <code>
+            .contenedor{
+                display:flex;
+            }
+            .elemento{
+                width:25%;
+            }
+        </code>
+      </pre>
+
+      <h4>Resultado:</h4>
+      <img src="../img/ejemplo-1.png" alt="ejemplo-1">
+
+      <p>
+       Al no definir el comportamiento de dirección y tamaño que tendrán los elementos de nuestro contenedor, aunque hayamos definido una anchura de elementos del 25% éstos se adaptan a su padre ocupando el 100% de anchura entre la suma de todos. Por defecto, tiene ese comportamiento “flexible” como indica su nombre.
+      </p>
+
+      <h4>Ejemplo 2:</h4>
+      <p>La propiedad  “flex-direction“, que puede tomar 4 valores y se aplica al padre (contenedor):</p>
+      <ul>
+        <li>flex-direction:row (los elementos son organizados de izquierda a derecha como en el ejemplo anterior)</li>
+        <li>flex-direction:row-reverse (los elementos son organizados de derecha a izquierda)</li>
+        <li>flex-direction:column (los elementos son organizados de arriba hacia abajo)</li>
+        <li>flex-direction:column-reverse (los elementos son organizados de abajo hacia arriba)</li>
+      </ul>
+
+      <pre>
+       <code>
+        .contenedor{
+            display:flex;
+            flex-direction:row-reverse;
+        }
+       </code>
+     </pre>
+
+     <h4>Resultado:</h4>
+     <img src="../img/ejemplo-2.png" alt="ejemplo-1">
+
+     <p>
+      Al no definir el comportamiento de dirección y tamaño que tendrán los elementos de nuestro contenedor, aunque hayamos definido una anchura de elementos del 25% éstos se adaptan a su padre ocupando el 100% de anchura entre la suma de todos. Por defecto, tiene ese comportamiento “flexible” como indica su nombre.
+     </p>
+
+
+     <h4>Ejemplo 3:</h4>
+     <p>La la propiedad “flex-wrap“, cuyo valor afecta a cómo se distribuyen los elementos en fila y, por consiguiente, a su tamaño. Los posibles valores son:</p>
+     <ul>
+       <li>flex-wrap:nowrap (Los elementos se muestran en línea, en una sola fila, y su tamaño se ajusta al contenedor siempre y cuando la suma de todos ellos sea mayor o igual que el 100% de la anchura del contenedor)</li>
+       <li>flex-wrap:wrap:row-reverse (Los elementos se muestran en línea, pero si su anchura supera la del contenedor, se distribuyen en varias filas)</li>
+       <li>flex-wrap:wrap-reverse (Los elementos se muestran en línea, pero si su anchura supera la del contenedor, se distribuyen en varias filas, y además lo hacen en orden inverso al de maquetación)</li>
+     </ul>
+
+     <pre>
+      <code>
+        .contenedor{
+            display:flex;
+            flex-wrap:wrap;
+        }
+      </code>
+    </pre>
+
+    <h4>Resultado:</h4>
+    <img src="../img/ejemplo-3.png" alt="ejemplo-1">
+
+    </article>
+
+    <!-- <aside class="aside aside-2">Aside 2</aside>-->
+    <footer class="footer">Footer</footer>
+  </div>
+</body>
+
+</html>

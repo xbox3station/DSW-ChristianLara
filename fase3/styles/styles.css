@@ -1,0 +1,157 @@
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+}
+
+.wrapper>* {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.navigation {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+
+  list-style: none;
+  margin: 0;
+  background: deepskyblue;
+}
+
+.menu,
+.menu * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+
+.menu {
+  background: deepskyblue;
+  margin-bottom: 5px;
+}
+
+.menu a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: white;
+}
+
+.menu a:hover {
+  background: #1565C0;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.menu ul li {
+  margin: 0 5px;
+  /* adjust */
+  padding: 5px;
+  /* adjust */
+}
+
+.menu ul li:last-child {
+  margin-left: auto;
+}
+
+.menu ul li:hover {
+  background: rgb(34, 103, 157);
+  color: white;
+}
+
+.menu ul li:hover .menu-submenu {
+  display: flex;
+}
+
+.menu-submenu {
+  display: none;
+  position: relative;
+  /* added */
+}
+
+.menu-submenu ul {
+  position: absolute;
+  top: 5px;
+  /* modified; adjust; needs to match the padding of the ".menu ul li" */
+  left: -5px;
+  /* added; adjust; needs to match the padding of the ".menu ul li" (negative) */
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-submenu ul li {
+  width: 100%;
+  /* added */
+  padding: 5px;
+  /* adjust */
+  white-space: nowrap;
+  /* added */
+  background: deepskyblue;
+  z-index: 10;
+}
+
+.footer {
+  background: deepskyblue;
+}
+
+.main {
+  text-align: left;
+  background: rgb(244, 244, 244);
+}
+
+.aside-1 {
+  background: rgb(39, 75, 157);
+}
+
+.aside-2 {
+  background: rgb(227, 224, 20);
+}
+
+@media all and (min-width: 600px) {
+  .aside {
+    flex: 1 0 0;
+  }
+}
+
+@media all and (min-width: 800px) {
+  .main {
+    flex: 3 0px;
+  }
+
+  .aside-1 {
+    order: 1;
+  }
+
+  .main {
+    order: 2;
+  }
+
+  .aside-2 {
+    order: 3;
+  }
+
+  .footer {
+    order: 4;
+  }
+}
+
+body {
+  padding: 2em;
+}
+
+pre code {
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  padding: 10px;
+}
+
+.profile {
+  size: 100%;
+  width: 100%;
+}
